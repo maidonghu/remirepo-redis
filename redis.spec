@@ -215,7 +215,7 @@ source /opt/rh/devtoolset-8/enable
 g++ --version
 %endif
 
-make %{?_smp_mflags} %{make_flags} all
+make %{?_smp_mflags} %{make_flags} all -j $(nproc)
 
 
 %install

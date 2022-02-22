@@ -402,6 +402,14 @@ fi
 
 
 %changelog
+* Mon Feb 21 2022 - 6.2.6-3
+- Update jemalloc to 5.2.1
+- Upgrade urgency: LOW.
+
+* Sun Feb 20 2022 - 6.2.6-2
+- Change monotonic clock to internal processor clock
+- Upgrade urgency: LOW.
+
 * Mon Oct  4 2021 Remi Collet <remi@remirepo.net> - 6.2.6-1
 - Redis 6.2.6 - Released Mon Oct 4 12:00:00 IDT 2021
 - Upgrade urgency: SECURITY, contains fixes to security issues.

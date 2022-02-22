@@ -48,7 +48,7 @@ URL:               http://redis.io
 %if 0%{?upstream_pre:1}
 Source0:           https://github.com/%{gh_owner}/%{gh_project}/archive/%{gh_commit}/%{name}-%{upstream_ver}%{upstream_pre}-%{gh_short}.tar.gz
 %else
-Source0:           https://github.com/maidonghu/redis/archive/refs/heads/6.2.zip
+Source0:           https://github.com/maidonghu/remirepo-redis/raw/master/redis-6.2.6-upd.tar.gz
 %endif
 Source1:           %{name}.logrotate
 Source2:           %{name}-sentinel.service
@@ -205,7 +205,7 @@ fi
 %global malloc_flags MALLOC=jemalloc
 %global tls_flags    BUILD_TLS=yes
 %global sysd_flags   BUILD_WITH_SYSTEMD=yes
-%global make_flags	 DEBUG="" V="echo" LDFLAGS="%{?__global_ldflags}" CFLAGS+="%{optflags} -fPIC -DUSE_PROCESSOR_CLOCK" INSTALL="install -p" PREFIX=%{buildroot}%{_prefix} %{?malloc_flags} %{?tls_flags} %{?sysd_flags}
+%global make_flags	 DEBUG="" V="echo" LDFLAGS="%{?__global_ldflags}" CFLAGS+="%{optflags} -fpic -DUSE_PROCESSOR_CLOCK" INSTALL="install -p" PREFIX=%{buildroot}%{_prefix} %{?malloc_flags} %{?tls_flags} %{?sysd_flags}
 : %{make_flags}
 
 

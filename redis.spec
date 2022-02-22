@@ -77,7 +77,7 @@ BuildRequires:  devtoolset-8-libatomic-devel
 BuildRequires:     jemalloc-devel
 %else
 # from deps/jemalloc/VERSION
-Provides:          bundled(jemalloc) = 5.1.0
+Provides:          bundled(jemalloc) = 5.2.1
 %endif
 %if %{with tests}
 BuildRequires:     procps-ng

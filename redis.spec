@@ -205,7 +205,7 @@ fi
 %global malloc_flags MALLOC=jemalloc
 %global tls_flags    BUILD_TLS=yes
 %global sysd_flags   BUILD_WITH_SYSTEMD=yes
-%global make_flags	 DEBUG="" V="echo" LDFLAGS="%{?__global_ldflags}" CFLAGS+="%{optflags} -fPIC" INSTALL="install -p" PREFIX=%{buildroot}%{_prefix} %{?malloc_flags} %{?tls_flags} %{?sysd_flags}
+%global make_flags	 DEBUG="" V="echo" LDFLAGS="%{?__global_ldflags}" CFLAGS+="%{optflags} -fPIC -DUSE_PROCESSOR_CLOCK" INSTALL="install -p" PREFIX=%{buildroot}%{_prefix} %{?malloc_flags} %{?tls_flags} %{?sysd_flags}
 : %{make_flags}
 
 

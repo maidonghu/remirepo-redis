@@ -40,7 +40,7 @@
 
 Name:              redis
 Version:           %{upstream_ver}%{?upstream_pre:~%{upstream_pre}}
-Release:           1%{?dist}
+Release:           3%{?dist}
 Summary:           A persistent key-value database
 Group:             Applications/Databases
 License:           BSD
